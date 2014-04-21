@@ -1,0 +1,81 @@
+<!-- app/Resources/views/base.html.twig -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <title>{% block title %}Blog Post{% endblock %}</title>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		<link href="{{ asset('bundles/joneblog/css/main.css') }}" rel="stylesheet" />		
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/slider.css') }}"  />
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/normalize.css') }}"  />		
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/demo.css') }}"  />
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/component.css') }}"  />
+		<link href="{{ asset('bundles/joneblog/bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet" media="screen"/> 
+		 <noscript>
+			<link rel="stylesheet" type="text/css" href="css/nojs.css" />
+		</noscript> 
+      
+    </head>
+    <body>
+		<section id="wrapper">  		  			
+			<div class="container-fluid">				
+				 <div class="row">
+				 	<header id="header">
+					 	<div class="span12 offset1">						
+							<div id="logo">
+								<img src="/bundles/joneblog/images/logo.png" />
+								<h3> Nulla e reale; tutto e lecito </h3>
+							</div>											
+						 </div>					
+						<div class="span12 offset1">
+							<nav>
+								<ul>
+									<li><a id="home" href="{{path('JoneBlogBundle_homepage') }}">Home</a></li>
+									<li><a id="property" href="{{ path('property') }}">Properties</a></li>	
+									<li><a id="gallery" href="{{ path('gallery') }}">Gallery</a></li>	
+									<li><a id="aboutus" href="{{ path('about-us') }}">About us</a></li>
+									<li><a id="contactus" href="{{ path('contact-us') }}">Contact us</a></li>	
+									<li><a id="blogs" href="{{ path('post') }}">Blogs</a></li>					
+								</ul>
+							</nav>					
+						</div>					
+					</header>	
+					{% block body %}{% endblock %}	
+					<div id="footer" class="span12 offset1">
+						{% block footer %}			
+							<div class="row">
+								<div class="span3 foot_box">
+									<p>Box here</p>
+								</div>
+								<div class="span3 foot_box">
+									<p>Box here</p>
+								</div>
+								<div class="span3 foot_box">
+									<p>Box here</p>
+								</div>
+								
+								<div class="span3 foot_box">
+									<p>Box here</p>
+								</div>
+							</div>
+							
+						{% endblock %} 
+					</div>	<!-- End of footer -->				   
+				</div> <!-- End of row -->					
+			</div> <!-- End of container-fluid -->					
+		</section> <!-- End of wrapper -->
+					
+        {% block javascripts %}			
+			<script src="{{ asset('bundles/joneblog/js/jquery.js') }}"></script>
+			<script src="{{ asset('bundles/joneblog/bootstrap/js/bootstrap.js') }}"></script>
+			 <!--[if lt IE 9]-->
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			  <!--[endif]-->
+
+        {% endblock %}
+    </body>
+</html>

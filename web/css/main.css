@@ -1,0 +1,72 @@
+html,body { margin:0; padding:0; }
+*{ margin:0; padding:0; }
+
+
+section, article, header, footer, nav, aside, hgroup {
+ display: block;
+} 
+/*
+background:#3A454B;
+*/
+h3 {font-style:italic; color:white;}
+h1, h2 {color:white;}
+nav {margin:10px 0 10px 0; }
+nav ul li { display: inline-block; padding:0 20px 0 20px; width:10%;}
+nav ul li a { color: white; text-decoration:none;font-size:1.3em; }
+nav ul li a:hover { text-decoration:underline; }
+nav ul {
+	width: 100%;
+	list-style: none;	
+	margin:0 auto;
+	text-align: center;
+	}
+
+#wrapper{
+	width:100%;	
+	background: url('/bundles/joneblog/images/bg.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    float:none;
+    min-height:550px;
+    
+	}
+#logo { width:25%; margin:0 auto; text-align:center;}
+#logo img { width:28%; }
+#slider {width: 100%; min-height:300px; }
+.center { margin:0 auto;}
+/*
+.span1{border:1px solid red;}
+.span12{border:1px solid black;}
+.span4{border:1px solid gray;}
+.span5{border:1px solid orange;}
+.span6{border:1px solid yellow;}
+.span7{border:1px solid green;}
+.span8{border:1px solid blue;}
+.span9{border:1px solid black;}
+.span12{border:1px solid black;}
+.span3{border:1px solid silver;}
+*/
+
+.foot_box { min-height:150px; margin-top:50px; }
+
+#sidebar{ width: 100%; }
+#sidebar img{ width:100%; height:50px;  padding: 1px; border: 2px solid #ccc;}
+#latest_project { width:95%; }
+#latest_project img{ width:100%; padding: 1px; border: 2px solid #ccc;} 
+#footer { text-align:center; }
+a {color: silver}
+/* .property_thumbnail { min-height:50px; width: 20%;}
+.property_thumbnail img{ width: 100%; height:50px; padding: 1px; border: 2px solid #ccc;} */
+.property_name { width:100%; margin-top:20px; }
+.round {
+width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}

@@ -1,0 +1,104 @@
+{# src/Jone/BlogBundle/Resources/views/Page/index.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body %}
+   	<div id="da-slider" class="da-slider">
+		{% for entity in entities2 %}
+		<div class="da-slide">
+			<h2>{{ entity.propertyName }}</h2>
+			<p>{{ entity.propertyDetail }}</p>
+			<a href="#" class="da-link">Read more</a>
+			<div class="da-img"><img class="round" src="{{ entity.propertyImage }}" alt="image01" /></div>
+		</div>
+		{% endfor %}
+		<nav class="da-arrows">
+			<span class="da-arrows-prev"></span>
+			<span class="da-arrows-next"></span>
+		</nav>
+	</div>
+	
+	<div class="span12 offset1">			
+		<div class="row">
+			<div class="span9">
+				<h1>About us</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id viverra velit. 
+					Maecenas quis nibh nisi. Mauris pulvinar aliquam sem, in porta orci tincidunt ut. 
+					Curabitur non nisl interdum odio fermentum bibendum sed nec ante. 
+					in porta orci tincidunt ut Curabitur nonconsectetur <a href="{{ path('about-us') }}">read more...</a> 
+				 </p><br/>
+				 <hr style="border:0; height:3px" />
+				 <div class="row">					
+					 <div class="span4">
+						<h1>Latest Project</h1>			
+						{% for entity in entities %}
+							<div id="latest_project">
+								<a href="{{ path('property') }}"><img src= "{{ entity.propertyImage }}" /></a>
+							</div>						
+								<h2>{{ entity.propertyName }}</h2>
+								<p>{{ entity.slug }}<a href="{{ path('property') }}">read more... </a></p>
+						{% endfor %}			
+					 </div>					
+					 
+					 <div class="span3">
+						<h1>Amenities</h1>
+						<p>
+							24 hour guard service <br/>
+							Laundry Facilities <br/>
+							Free wifi Access <br/>
+							Canteen and store <br/>
+							Clean Rooms <br/>
+							Parking space and garage 			
+						</p>						
+					 </div>
+					 
+					  <div class="span2">
+						<h1>Facilities</h1>	
+						<p>
+							Warehouse<br/>
+							Storages<br/>
+							Spas<br/>
+							Swimming Pool
+						</p>					
+					 </div>
+				 </div>
+			</div>
+			
+			<div class="span3">
+				 {% block sidebar %}
+						<h1>Properties</h1>
+					{% for entity in entities2 %}
+					<div class="row">
+						<div id="sidebar" class="span3">
+							<div class="row">
+								<div class="span1">
+									<img src="{{ entity.propertyImage }}" />													
+								</div>
+								 <div class="span2">
+								 	<div class="property_name">
+								 		<h4>{{ entity.propertyName }}</h4>
+								 		</div>
+								 </div>	
+							</div>
+						</div>
+					</div>		
+					{% endfor %}
+				{% endblock %}
+			</div>		
+		</div>
+	</div>
+{% endblock %}
+{% block javascripts %}	
+	<script src="{{ asset('bundles/joneblog/js/jquery.js') }}"></script>
+	<script src="{{ asset('bundles/joneblog/js/jquery.cslider.js') }}"></script>
+	<script src="{{ asset('bundles/joneblog/js/modernizr.custom.28468.js') }}"></script>	
+	
+	<script>
+		$(function() {			
+			$('#da-slider').cslider({
+				autoplay	: true,
+				interval    : 5000 
+			});						
+		 }); //End of main function
+	</script>	
+ {% endblock %}

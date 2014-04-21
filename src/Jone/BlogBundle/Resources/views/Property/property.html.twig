@@ -1,0 +1,29 @@
+{# src/Jone/BlogBundle/Resources/views/Property/property.html.twig #}
+{% extends '::base.html.twig' %}
+
+ {% block body %}
+	<div class="span12 offset1">
+		<h1>This is Property page</h1>		
+		 <section id="grid" class="grid clearfix">		    
+			   {% for entity in entities %} 
+			     <!-- <a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z"> -->
+			     <a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+			        <figure>
+			            <img src="{{ entity.propertyImage }}" />
+			          <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+			            <figcaption>
+			                <h2>{{ entity.propertyName }}</h2>
+			                <p>{{ entity.slug }}</p>
+			                <button>View</button>
+			            </figcaption>
+			        </figure>
+			    </a>
+			{% endfor %}			
+		</section>	
+	</div>
+ {% endblock %}
+ 
+ {% block javascripts %}	
+ 	<script src="{{ asset('bundles/joneblog/js/snap.svg-min.js') }}"></script>
+ 	<script src="{{ asset('bundles/joneblog/js/hovers.js') }}"></script> 	
+ {% endblock %}

@@ -1,0 +1,30 @@
+Jone\BlogBundle\Entity\Property:
+    type: entity
+    table: Property
+    repositoryClass: Jone\BlogBundle\Entity\PropertyRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        propertyName:
+            type: string
+            length: '255'
+            column: property_name
+        propertyDetail:
+            type: string
+            length: '2500'
+            column: property_detail
+        propertyImage:
+            type: string
+            length: '255'
+            column: property_image
+        slug:
+            type: string
+            length: '255'
+        datePublished:
+            type: datetime
+            column: date_published
+    lifecycleCallbacks: {  }

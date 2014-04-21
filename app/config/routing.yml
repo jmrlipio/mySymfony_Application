@@ -1,0 +1,4 @@
+jone_blog:
+    resource: "@JoneBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

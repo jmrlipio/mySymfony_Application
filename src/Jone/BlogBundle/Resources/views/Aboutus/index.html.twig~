@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+ {% block body %}
+	
+	<div class="span12 offset1">
+		<div id="about_container">
+			<h1>This is a about us container</h1>
+		</div>
+	</div>
+ {% endblock %}

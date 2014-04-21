@@ -1,0 +1,3 @@
+contact-us:
+    pattern:  /
+    defaults: { _controller: "JoneBlogBundle:Contactus:index" }

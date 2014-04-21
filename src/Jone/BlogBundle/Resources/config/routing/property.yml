@@ -1,0 +1,30 @@
+property:
+    pattern:  /
+    defaults: { _controller: "JoneBlogBundle:Property:index" }
+
+property_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "JoneBlogBundle:Property:show" }
+
+property_new:
+    pattern:  /new
+    defaults: { _controller: "JoneBlogBundle:Property:new" }
+
+property_create:
+    pattern:  /create
+    defaults: { _controller: "JoneBlogBundle:Property:create" }
+    requirements: { _method: post }
+
+property_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "JoneBlogBundle:Property:edit" }
+
+property_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "JoneBlogBundle:Property:update" }
+    requirements: { _method: post|put }
+
+property_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "JoneBlogBundle:Property:delete" }
+    requirements: { _method: post|delete }

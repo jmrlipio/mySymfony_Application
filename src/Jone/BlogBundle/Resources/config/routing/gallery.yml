@@ -1,0 +1,3 @@
+gallery:
+    pattern:  /
+    defaults: { _controller: "JoneBlogBundle:Gallery:index" }
