@@ -11,7 +11,7 @@ background:#3A454B;
 h3 {font-style:italic; color:white;}
 h1, h2 {color:white;}
 nav {margin:10px 0 10px 0; }
-nav ul li { display: inline-block; padding:0 20px 0 20px; width:13%;}
+nav ul li { display: inline-block; padding:0 20px 0 20px; width:10%;}
 nav ul li a { color: white !important; text-decoration:none;font-size:1.3em; }
 nav ul li a:hover { text-decoration:underline; }
 nav ul {
@@ -82,4 +82,7 @@ width: 300px;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 	transition: opacity 0.3s, transform 0.3s;	
 }
+
+/*This is the cope of component2.css*/
+
 
