@@ -36,8 +36,6 @@ class ContactusController extends Controller
 		    }
 	    }	
 		return $this->render('JoneBlogBundle:Contactus:contactus.html.twig',array('form' => $form->createView()));
-        
-      
 
         // render a PHP template instead
         // return $this->render(
