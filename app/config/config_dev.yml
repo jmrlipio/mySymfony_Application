@@ -30,7 +30,8 @@ monolog:
         #    level:  info
 
 assetic:
-    use_controller: true
+    use_controller: false
+    bundles:       ['JoneBlogBundle']
 
 #swiftmailer:
 #    delivery_address: me@example.com

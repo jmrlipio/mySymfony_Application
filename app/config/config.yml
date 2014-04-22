@@ -34,7 +34,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ JoneBlogBundle ]
+    bundles:       ['JoneBlogBundle']
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -68,6 +68,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-    
+
 assetic:
-   bundles: [ JoneBlogBundle ]
+    filters:
+        jpegoptim:
+            bin: path/to/jpegoptim
+    twig:
+        functions:
+            jpegoptim: { output: images/*.jpg }
