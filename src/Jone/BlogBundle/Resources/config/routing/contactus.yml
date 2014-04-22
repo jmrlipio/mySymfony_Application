@@ -1,3 +1,5 @@
 contact-us:
     pattern:  /
     defaults: { _controller: "JoneBlogBundle:Contactus:index" }
+    requirements:
+        _method:  GET|POST
