@@ -1,5 +1,6 @@
 <?php
 // src/Blogger/BlogBundle/Entity/Enquiry.php
+// Test upload using geany
 
 namespace Jone\BlogBundle\Entity;
 
