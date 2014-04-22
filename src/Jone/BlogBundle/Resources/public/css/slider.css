@@ -163,9 +163,7 @@
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
-/*
 	background: #e4b42d;
-*/
 	cursor: pointer;
 	z-index: 2000;
 	opacity: 0;
@@ -202,7 +200,7 @@
 	background-position: top right;
 }
 .da-arrows span.da-arrows-prev{
-	left: 40px;
+	left: 15px;
 }
 .da-arrows span.da-arrows-next{
 	right: 15px;

@@ -1,60 +1,38 @@
-html,body { margin:0; padding:0; }
+html,body { margin:0; padding:0;}
 *{ margin:0; padding:0; }
-
 
 section, article, header, footer, nav, aside, hgroup {
  display: block;
 } 
-/*
-background:#3A454B;
-*/
+
+h1 { font-size:40px !important; color:white !important; font-weight:bold !important;}
+p {margin:0 !important; font-size: 17px !important; color:black; line-height:23px; }
+h2 { font-size:30px !important; color:white !important; font-weight:bold !important;}
+
+body {font-family: arial !important;}
 h3 {font-style:italic; color:white;}
 h1, h2 {color:white;}
-nav {margin:10px 0 10px 0; }
-nav ul li { display: inline-block; padding:0 20px 0 20px; width:10%;}
-nav ul li a { color: white !important; text-decoration:none;font-size:1.3em; }
-nav ul li a:hover { text-decoration:underline; }
-nav ul {
-	width: 100%;
-	list-style: none;	
-	margin:0 auto;
-	text-align: center;
-	}
 
 #wrapper{
-	width:100%;	
+	/*width:100%;	
 	background: url('/bundles/joneblog/images/bg.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    float:none;
-    min-height:550px;
+    min-height:650px;*/
     
 	}
-#logo { width:25%; margin:0 auto; text-align:center;}
+#logo { width:25%; margin:0 auto; text-align:center; margin-top:30px;}
 #logo img { width:28%; }
 #slider {width: 100%; min-height:300px; }
-.center { margin:0 auto;}
-/*
-.span1{border:1px solid red;}
-.span12{border:1px solid black;}
-.span4{border:1px solid gray;}
-.span5{border:1px solid orange;}
-.span6{border:1px solid yellow;}
-.span7{border:1px solid green;}
-.span8{border:1px solid blue;}
-.span9{border:1px solid black;}
-.span12{border:1px solid black;}
-.span3{border:1px solid silver;}
-*/
 
 .foot_box { min-height:150px; margin-top:50px; }
-
-#sidebar{ width: 100%; }
-#sidebar img{ width:100%; height:50px;  padding: 1px; border: 2px solid #ccc;}
+#sidebar a { color:black !important; font-size: 16px !important; }
+#sidebar_content{ width: 100%; margin-top:10px;}
+#sidebar_content img{ width:30%; height:60px;  padding: 1px; border: 2px solid #ccc;}
 #latest_project { width:95%; }
-#latest_project img{ width:100%; padding: 1px; border: 2px solid #ccc;} 
+#latest_project img{ width:100%; padding: 1px; border: 2px solid #ccc; margin-top: 8px;} 
 #footer { text-align:center; }
 a {color: silver !important;}
 /* .property_thumbnail { min-height:50px; width: 20%;}
@@ -95,3 +73,70 @@ form.blogger input[type="email"]
 form.blogger textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
 form.blogger input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
 form.blogger ul li { color: #ff0000; margin-bottom: 5px; }
+
+.jumbotron { background:transparent !important;  margin-bottom:0 !important;}
+#logo h3 { margin:0 !important; }
+
+h1, .h1, h2, .h2, h3, .h3 { margin:0 !important; }
+.da-slider { margin:0 !important; }
+.da-slide h2 {font-size: 65px !important;}
+hr {border:1; height:3px; margin:0 !important;}
+.mtop {margin-top:20px;}
+
+/*.col-md-8 {	border:1px solid black; }*/
+.col-md-5 {	border:1px solid red; }
+/*.col-md-4 {	border:1px solid blue; }
+.col-md-3 {	border:1px solid green; }*/
+.no-pleft { padding-left:0 !important;}
+
+/*#footer .col-md-3 {border:1px solid red;}*/
+#about_us_img {width:100%;}
+
+/*Addition CSS for parallax scrolling*/
+
+#intro { 
+	background: url('/bundles/joneblog/images/cool.jpg') 50% 0 fixed; 
+	height: auto;  
+	margin: 0 auto; 
+    width: 100%;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 115px 0;
+}
+#home1 { 
+	background: url('/bundles/joneblog/images/bg2.jpg') 50% 0 fixed; 
+	height: auto;  
+	margin: 0 auto; 
+    width: 100%; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+}
+#about { 
+	background: url('/bundles/joneblog/images/br.jpg') 50% 0 fixed; 
+	height: auto;
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 150px 0;
+    color: #fff;
+}
+#footer { 
+	background: url('/bundles/joneblog/images/bg_footer.png') 50% 0 fixed; 
+	height: auto;
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    color: #fff;
+}
+
+/* Non-essential demo stuff */
+.hero-unit {
+	background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.media-object { width: 64px; height: 64px; padding-bottom: 30px }
+
+
+

@@ -1,6 +1,6 @@
 <!-- app/Resources/views/base.html.twig -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -14,67 +14,58 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/slider.css') }}"  />
 		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/normalize.css') }}"  />		
 		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/demo.css') }}"  />
-		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/component.css') }}"  />		
-		<link href="{{ asset('bundles/joneblog/bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet" media="screen"/> 
-		<link href="{{ asset('bundles/joneblog/bootstrap/css/bootstrap.min.css') }}"/> 
+		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/joneblog/css/component.css') }}"  />			 
+		<link rel="stylesheet" href="{{ asset('bundles/joneblog/bootstrap/css/bootstrap.min.css') }}"/> 
 		 <noscript>
 			<link rel="stylesheet" type="text/css" href="css/nojs.css" />
 		</noscript> 
       {% endblock %}
     </head>
     <body>
-		<section id="wrapper">  		  			
-			<div class="container-fluid">				
-				 <div class="row">
-				 	<header id="header">
-					 	<div class="span12 offset1">						
-							<div id="logo">
-								<img src="/bundles/joneblog/images/logo.png" />
-								<h3> Nulla e reale; tutto e lecito </h3>
-							</div>											
-						 </div>					
-						{% block navigation %}
-						<div class="span12 offset1">
-							<nav>
-								<ul>
-									<li><a id="home" href="{{path('JoneBlogBundle_homepage') }}">Home</a></li>
-									<li><a id="property" href="{{ path('property') }}">Properties</a></li>	
-									<li><a id="gallery" href="{{ path('gallery') }}">Gallery</a></li>	
-									<li><a id="aboutus" href="{{ path('about-us') }}">About us</a></li>
-									<li><a id="contactus" href="{{ path('contact-us') }}">Contact us</a></li>	
-									<li><a id="blogs" href="{{ path('post') }}">Blogs</a></li>					
-								</ul>
-							</nav>					
-						</div>					
-					</header>	
-					{% endblock %}	
-					{% block body %}{% endblock %}	
-					<div id="footer" class="span12 offset1">
-						{% block footer %}			
-							<div class="row">
-								<div class="span3 foot_box">
-									<p>Box here</p>
-								</div>
-								<div class="span3 foot_box">
-									<p>Box here</p>
-								</div>
-								<div class="span3 foot_box">
-									<p>Box here</p>
-								</div>								
-								<div class="span3 foot_box">
-									<p>Box here</p>
-								</div>
-							</div>							
-						{% endblock %} 
-					</div>	<!-- End of footer -->				   
-				</div> <!-- End of row -->					
-			</div> <!-- End of container-fluid -->					
+		<section id="wrapper">
+			
+		<!-- <div id="logo">
+			<img src="/bundles/joneblog/images/logo.png" />
+			<h3> Nulla e reale; tutto e lecito </h3>
+		</div>			 -->				 		
+		<header>	
+		{% block navigation %}		
+			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			      <div class="container">
+			        <div class="navbar-header">				         
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			          
+			          <a class="navbar-brand" href="#">mySymfony</a>
+			        </div>
+			        <div class="navbar-collapse collapse">
+			        	
+			        	    <ul class="nav navbar-nav pull-right">
+						        <li class="active"><a id="home" href="{{path('JoneBlogBundle_homepage') }}">Home</a></li>
+								<li><a id="property" href="{{ path('property') }}">Properties</a></li>	
+								<li><a id="gallery" href="{{ path('gallery') }}">Gallery</a></li>	
+								<li><a id="aboutus" href="{{ path('about-us') }}">About us</a></li>
+								<li><a id="contactus" href="{{ path('contact-us') }}">Contact us</a></li>	
+								<li><a id="blogs" href="{{ path('post') }}">Blogs</a></li>								        
+						      </ul>		        	
+			        </div><!--/.navbar-collapse -->
+			      </div>			
+			</div>
+		{% endblock %}									
+		</header>
+			
+			
+				{% block body %}{% endblock %}	
+			
+								
 		</section> <!-- End of wrapper -->
 					
         {% block javascripts %}			
 			<script src="{{ asset('bundles/joneblog/js/jquery.js') }}"></script>
-			<script src="{{ asset('bundles/joneblog/bootstrap/js/bootstrap.js') }}"></script>
-			<script src="{{ asset('bundles/joneblog/bootstrap/js/modernizr.custom.js') }}"></script>
+			<script src="{{ asset('bundles/joneblog/bootstrap/js/bootstrap.min.js') }}"></script>
+			<script src="{{ asset('bundles/joneblog/js/modernizr.custom.js') }}"></script>
+			
 			 <!--[if lt IE 9]-->
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			  <!--[endif]-->
